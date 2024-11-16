@@ -21,22 +21,22 @@ void motor_target_set(int tarA, int tarB)
 	targetB = tarB;
 	if(tarA >= 0) 
 	{
-		motorA_dir = 1;
+		motorA_dir = 0;
 		motorA.target = tarA;
 	}
 	else
 	{
-		motorA_dir = 0;
+		motorA_dir = 1;
 		motorA.target = -tarA;
 	}
 	if(tarB >= 0) 
 	{
-		motorB_dir = 1;
+		motorB_dir = 0;
 		motorB.target = tarB;
 	}
 	else
 	{
-		motorB_dir = 0;
+		motorB_dir = 1;
 		motorB.target = -tarB;
 	}
 }
@@ -44,18 +44,21 @@ void motor_target_set(int tarA, int tarB)
 
 void pid_controlA(void)
 {
+	track();
 	if(motorA_dir) motorA.now = Encoder_countA;
 	else motorA.now = -Encoder_countA;
+	SpeedA_now = Encoder_countA;		//当前速度，调试
 	Encoder_countA = 0;
 	pid_cal(&motorA);
 	motorA_duty(motorA.out);
-	SpdA = motorA.out;
+	SpdA = motorA.out;			//占空比
 }
 
 void pid_controlB(void)
 {
 	if(motorB_dir) motorB.now = Encoder_countB;
 	else motorB.now = -Encoder_countB;
+	SpeedB_now = Encoder_countB;
 	Encoder_countB = 0;
 	pid_cal(&motorB);
 	motorB_duty(motorB.out);

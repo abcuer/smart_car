@@ -4,6 +4,9 @@
 int16_t Encoder_countA;
 int16_t Encoder_countB;
 
+int16_t SpeedA_now;
+int16_t SpeedB_now;
+
 int16_t SpdA;
 int16_t SpdB;
 int16_t targetA;
@@ -14,17 +17,18 @@ uint16_t KeyNum1;
 
 int main(void)
 {
-	OLED_Init();
+//	OLED_Init();
 	Key_Init();
 	Timer_Init();
 	EncoderA_Init();
 	EncoderB_Init();
 	Motor_Run_Init();
 	Serial_Init();
+	gray_init();
 	
-	motor_target_set(200, 200);
-	pid_Init(&motorA, DELTA_PID, 0.21, 0.05, 0);
-	pid_Init(&motorB, DELTA_PID, 0.21, 0.05, 0);
+//	motor_target_set(50, 50);
+	pid_Init(&motorA, DELTA_PID, 0.1428, 0.052, 0);
+	pid_Init(&motorB, DELTA_PID, 0.14, 0.052, 0);
 //	
 //	OLED_ShowString(1,1,"EcA:");
 //	OLED_ShowString(2,1,"EcB:");
@@ -33,18 +37,21 @@ int main(void)
 	
 	while(1)
 	{
-		
 //		KeyNum = Key_GetNum();
 //		if(KeyNum == 1)
 //		{
 //			KeyNum1 ++;
 //		}
-		OLED_ShowNum(1,1,targetA,3);
-		OLED_ShowNum(1,9,targetB,3);
-		OLED_ShowSignedNum(2,1,motorA.now, 5);
-		OLED_ShowSignedNum(2,9,motorB.now, 5);
-		OLED_ShowSignedNum(3,1,SpdA,3);
-		OLED_ShowSignedNum(3,9,SpdB,3);
+//		OLED_ShowNum(1,1,targetA,3);
+//		OLED_ShowNum(1,9,targetB,3);
+//		OLED_ShowSignedNum(2,1,motorA.now, 5);
+//		OLED_ShowSignedNum(2,9,motorB.now, 5);
+//		OLED_ShowSignedNum(3,1,SpdA,3);
+//		OLED_ShowSignedNum(3,9,SpdB,3);
+		
+			Serial_Printf("%d %d %d %d %d %d %d\r\n", Gray_7, Gray_6, Gray_5, Gray_4, Gray_3, Gray_2, Gray_1);
+		
+		
 //		Serial_Printf("SpeedB = %d\r\n", Speed2);
 //	
 //		switch(KeyNum1)
@@ -67,7 +74,8 @@ void TIM4_IRQHandler(void)
 		Encoder_countB = EncoderB_Get();
 		pid_controlA();
 		pid_controlB();
-		
+		Serial_Printf("%d,%d,%d\r\n", targetA, SpeedA_now,SpeedB_now);
+	
 		TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
 	}
 }

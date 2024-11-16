@@ -36,6 +36,7 @@
 ".\objects\motor_run.o"
 ".\objects\serial.o"
 ".\objects\pid.o"
+".\objects\gray_track.o"
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
 --strict --scatter ".\Objects\Project.sct"

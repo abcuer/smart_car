@@ -31,10 +31,10 @@
 .\objects\main.o: .\Hardware\global.h
 .\objects\main.o: .\System\Delay.h
 .\objects\main.o: .\Hardware\Key.h
-.\objects\main.o: .\Hardware\OLED.h
 .\objects\main.o: .\System\Timer.h
 .\objects\main.o: .\Hardware\Encoder.h
 .\objects\main.o: .\Hardware\Motor_Run.h
 .\objects\main.o: .\Hardware\Serial.h
 .\objects\main.o: D:\Application\Work\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: .\Hardware\pid.h
+.\objects\main.o: .\Hardware\gray_track.h

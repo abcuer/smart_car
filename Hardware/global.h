@@ -2,12 +2,13 @@
 #define __GLOBAL_H
 #include "Delay.h"
 #include "Key.h"
-#include "OLED.h"
+//#include "OLED.h"
 #include "Timer.h"
 #include "Encoder.h"
 #include "Motor_Run.h"
 #include "Serial.h"
 #include "pid.h"
+#include "gray_track.h"
 
 
 #define MAX_DUTY 100
@@ -26,4 +27,7 @@ extern int16_t SpdB;
 
 extern int16_t targetA;
 extern int16_t targetB;
+
+extern int16_t SpeedA_now;
+extern int16_t SpeedB_now;
 #endif

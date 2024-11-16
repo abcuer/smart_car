@@ -676,14 +676,14 @@
           <GroupName>Hardware</GroupName>
           <Files>
             <File>
-              <FileName>LED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Hardware\LED.c</FilePath>
-            </File>
-            <File>
               <FileName>LED.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\LED.h</FilePath>
+            </File>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\LED.c</FilePath>
             </File>
             <File>
               <FileName>Key.c</FileName>
@@ -766,20 +766,30 @@
               <FilePath>.\Hardware\pid.c</FilePath>
             </File>
             <File>
-              <FileName>global.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Hardware\global.h</FilePath>
-            </File>
-            <File>
               <FileName>pid.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\pid.h</FilePath>
+            </File>
+            <File>
+              <FileName>gray_track.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\gray_track.c</FilePath>
+            </File>
+            <File>
+              <FileName>gray_track.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\gray_track.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>User</GroupName>
           <Files>
+            <File>
+              <FileName>global.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\global.h</FilePath>
+            </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>

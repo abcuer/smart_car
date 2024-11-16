@@ -25,10 +25,10 @@ void Speed_R(uint16_t Speed_r)
 	TIM_SetCompare2(TIM2, Speed_r);
 }
 
-void motorB_duty(int duty) /* ”“¬÷ 1 3 5 Encoder 6 7*/
+void motorB_duty(int duty) /* ”“¬÷ 1 4 5 Encoder 6 7*/
 {
 	Speed_R(duty);
-	GPIO_WriteBit(GPIOA, GPIO_Pin_3, (BitAction) motorB_dir);
+	GPIO_WriteBit(GPIOA, GPIO_Pin_4, (BitAction) motorB_dir);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_5, (BitAction) !motorB_dir);
 }
 

@@ -33,8 +33,8 @@
 .\objects\pid.o: Hardware\global.h
 .\objects\pid.o: .\System\Delay.h
 .\objects\pid.o: Hardware\Key.h
-.\objects\pid.o: Hardware\OLED.h
 .\objects\pid.o: .\System\Timer.h
 .\objects\pid.o: Hardware\Encoder.h
 .\objects\pid.o: Hardware\Serial.h
 .\objects\pid.o: D:\Application\Work\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\pid.o: Hardware\gray_track.h
