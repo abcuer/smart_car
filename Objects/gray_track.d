@@ -30,6 +30,7 @@
 .\objects\gray_track.o: .\Library\misc.h
 .\objects\gray_track.o: Hardware\global.h
 .\objects\gray_track.o: .\System\Delay.h
+.\objects\gray_track.o: Hardware\LED.h
 .\objects\gray_track.o: Hardware\Key.h
 .\objects\gray_track.o: .\System\Timer.h
 .\objects\gray_track.o: Hardware\Encoder.h
@@ -38,3 +39,9 @@
 .\objects\gray_track.o: D:\Application\Work\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\gray_track.o: Hardware\pid.h
 .\objects\gray_track.o: Hardware\gray_track.h
+.\objects\gray_track.o: Hardware\MyI2C.h
+.\objects\gray_track.o: Hardware\MPU6050.h
+.\objects\gray_track.o: D:\Application\Work\Keil5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\gray_track.o: Hardware\filter.h
+.\objects\gray_track.o: Hardware\Buzzer.h
+.\objects\gray_track.o: Hardware\detect_position.h

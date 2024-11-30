@@ -1,16 +1,13 @@
 #include "stm32f10x.h"   
 #include "global.h"
 
+int basic_speed = 0;
+int err = 0;
+uint8_t Line_flag = 0;
+uint8_t Line_flag_time = 0;
+
 void gray_init()
 {
-//	gpio_init(GPIO_B, Pin_12, IU);   // D1
-//	gpio_init(GPIO_B, Pin_13, IU);   // D2
-//	gpio_init(GPIO_B, Pin_14, IU);   // D3
-//	gpio_init(GPIO_B, Pin_15, IU);   // D4
-//	gpio_init(GPIO_A, Pin_8, IU);    // D5
-//	gpio_init(GPIO_C, Pin_13, IU);   // D6
-//	gpio_init(GPIO_C, Pin_14, IU);   // D7
-//	gpio_init(GPIO_C, Pin_15, IU);   // D8
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
 	
@@ -26,180 +23,88 @@ void gray_init()
 		GPIO_Init(GPIOA, &GPIO_InitStructure);
 }
 
-void track(void)												// 765 4 321
-{																	
-	if(Gray_4 == 0) 											// 111 0 111
+void Get_Light_TTL(void)
+{
+	
+	if(L3 == 1 || L2== 1 || L1 == 1 || C1 == 1 || R1 == 1 || R2 == 1 || R3 == 1)
 	{
-		motor_target_set(100, 100);
+		Line_flag = 1;
 	}
-	else if(Gray_4 != 0 && Gray_5 == 0)		// 110 1 111
-	{
-		motor_target_set(100, 120);
-	}
-	else if(Gray_4 != 0 && Gray_3 == 0)		// 111 1 011
-	{
-		motor_target_set(120, 100);
-	}
-	else if(Gray_4 == 0 && Gray_5 == 0)		// 110 0 111
-	{
-		motor_target_set(90, 130);
-	}
-	else if(Gray_4 == 0 && Gray_3 == 0)		// 111 0 011
-	{
-		motor_target_set(130, 90);					
-	}
-	else if(Gray_4 != 0 && Gray_5 == 0)		// 110 1 111
-	{
-		motor_target_set(90, 130);
-	}
-	else if(Gray_4 != 0 && Gray_3 == 0)		// 111 1 011
-	{
-		motor_target_set(130, 90);
-	}
-	else if(Gray_6 == 0 && Gray_5 == 0)		// 100 1 111
-	{
-		motor_target_set(80, 150);
-	}
-	else if(Gray_3 == 0 && Gray_2 == 0)		// 111 1 001
-	{
-		motor_target_set(150, 80);
-	}
-	else if(Gray_6 == 0 && Gray_5 != 0)  	// 101 1 111
-	{
-		motor_target_set(80, 160);
-	}
-	else if(Gray_3 !=0 && Gray_2 == 0) 		// 111 1 101
-	{
-		motor_target_set(160, 80);
-	}
-	else if(Gray_7 == 0 && Gray_6 == 0)		// 001 1 111
-	{
-		motor_target_set(70,170);
-	}
-	else if(Gray_2 == 0 && Gray_1 == 0)		// 111 1 100
-	{
-		motor_target_set(170, 70);
-	}
-	else if(Gray_7 == 0 && Gray_6 != 0)		// 011 1 111
-	{
-		motor_target_set(60, 180);
-	}
-	else if(Gray_1 == 0 && Gray_2 != 0)		// 111 1 110
-	{
-		motor_target_set(180, 60);
-	}
-	else 																	// 111 1 111		
-	{
-		motor_target_set(100, 100);
-	}
+//	else
+//	{
+//		Line_flag_time ++;
+//		if(Line_flag_time >= 10)
+//		{
+//			Line_flag = 0;
+//		}
+//	}
 }
 
-//void track()                        //1234 5678
-//{
-//		if((D4 == 0)&&(D5 == 0))        //1110 0111
-//		{
-//			motor_target_set(100,100);
-//		}
-//		else if((D4 == 0)&&(D5 != 0))   //1110 1111
-//		{
-//			motor_target_set(100,120); //向右偏
-//		}
-//		else if((D4 != 0)&&(D5 == 0))   //1111 0111
-//		{
-//			motor_target_set(120,100);  
-//		}
-//		else if((D3 != 0)&&(D4 == 0))   //1100 1111
-//		{
-//			motor_target_set(90,130);
-//		}
-//		else if((D5 == 0)&&(D6 == 0))   //1111 0011
-//		{
-//			motor_target_set(130,90);
-//		}
-//		else if((D3 == 0)&&(D4 != 0))   //1101 1111
-//		{
-//			motor_target_set(90,130);
-//		}
-//		else if((D5 != 0)&&(D6 == 0))   //1111 1011
-//		{
-//			motor_target_set(130,90);
-//		}
-//		else if((D2 == 0)&&(D3 == 0))   //1001 1111
-//		{
-//			motor_target_set(80,150);
-//		}
-//		else if((D6 == 0)&&(D7 == 0))   //1111 1001
-//		{
-//			motor_target_set(150,80);
-//		}
-//		else if((D2 == 0)&&(D3 != 0))   //1011 1111
-//		{
-//			motor_target_set(80,150);
-//		}
-//		else if((D6 != 0)&&(D7 == 0))   //1111 1101
-//		{
-//			motor_target_set(150,80);
-//		}
-//		else if((D1 == 0)&&(D2 == 0))   //0011 1111
-//		{
-//			motor_target_set(60,180);
-//		}
-//		else if((D7 == 0)&&(D8 == 0))   //1111 1100
-//		{
-//			motor_target_set(180,60);
-//		}
-//		else if((D1 == 0)&&(D2 != 0))   //0111 1111
-//		{
-//			motor_target_set(40,180);
-//		}	
-//		else if((D7 !=0)&&(D8 == 0))    //1111 1110
-//		{
-//			motor_target_set(180,40);
-//		}
-//		else                            //1111 1111
-//		{
-//			motor_target_set(100,100);
-//		}
-//}
-
-//unsigned char digtal(unsigned char channel)//1-8	  ��ȡXͨ������ֵ
-//{
-//	u8 value = 0;
-//	switch(channel) 
-//	{
-//		case 1:  
-//			if(gpio_get(GPIO_B, Pin_12) == 1) value = 1;
-//			else value = 0;  
-//			break;  
-//		case 2: 
-//			if(gpio_get(GPIO_B, Pin_13) == 1) value = 1;
-//			else value = 0;  
-//			break;  
-//		case 3: 
-//			if(gpio_get(GPIO_B, Pin_14) == 1) value = 1;
-//			else value = 0;  
-//			break;   
-//		case 4:  
-//			if(gpio_get(GPIO_B, Pin_15) == 1) value = 1;
-//			else value = 0;  
-//			break;   
-//		case 5:
-//			if(gpio_get(GPIO_A, Pin_8) == 1) value = 1;
-//			else value = 0;  
-//			break;
-//		case 6:  
-//			if(gpio_get(GPIO_C, Pin_13) == 1) value = 1;
-//			else value = 0;  
-//			break;  
-//		case 7: 
-//			if(gpio_get(GPIO_C, Pin_14) == 1) value = 1;
-//			else value = 0;  
-//			break;  
-// 		case 8: 
-// 			if(gpio_get(GPIO_C, Pin_15) == 1) value = 1;
-// 			else value = 0;  
-// 			break;   
-//	}
-//	return value; 
-//}
+void track(void)
+{
+	basic_speed = 20;
+	if((L3==1&&L2==1&&L1==1&&C1==1&&R1==1&&R2==1&&R3==1)
+	||(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0))
+	{	
+		motor_speed_control(0,0);
+	}
+	else
+	{		
+		if(L3==0&&L2==0&&L1==0&&C1==1&&R1==0&&R2==0&&R3==0)							// 000 1 000
+		{
+			err = 0;
+		}
+		//偏右
+		else if(L3==0&&L2==0&&L1==1&&C1==1&&R1==0&&R2==0&&R3==0)							// 001 1 000
+		{
+			err = -3;
+		}
+		//偏左
+		else if(L3==0&&L2==0&&L1==0&&C1==1&&R1==1&&R2==0&&R3==0)							// 000 1 100
+		{
+			err = 3;
+		}
+		else if(L3==0&&L2==0&&L1==1&&C1==0&&R1==0&&R2==0&&R3==0)							// 001 0 000
+		{
+			err = -4;
+		}
+		else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==1&&R2==0&&R3==0)							// 000 0 100
+		{
+			err = 4;
+		}
+		else if(L3==0&&L2==1&&L1==1&&C1==0&&R1==0&&R2==0&&R3==0)							// 011 0 000
+		{
+			err = -5;
+		}
+		else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==1&&R2==1&&R3==0)							// 000 0 110
+		{
+			err = 5;
+		}				
+		else if(L3==0&&L2==1&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)							// 010 0 000 1
+		{
+			err = -6;
+		}
+		else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==1&&R3==0)							// 000 0 010	
+		{	
+			err =	6; 
+		}
+		else if(L3==1&&L2==1&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)							// 110 0 000
+		{
+			err = -7;
+		}
+		else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==1&&R3==1)							// 000 0 011
+		{
+			err = 7;
+		}
+		else if(L3==1&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)							// 100 0 000 	
+		{
+			err = -8;
+		}
+		else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==1)							// 000 0 001 
+		{
+			err = 8;
+		}
+		motor_speed_control(basic_speed, err);
+	}
+}
 

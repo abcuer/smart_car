@@ -32,9 +32,16 @@
 .\objects\pid.o: Hardware\Motor_Run.h
 .\objects\pid.o: Hardware\global.h
 .\objects\pid.o: .\System\Delay.h
+.\objects\pid.o: Hardware\LED.h
 .\objects\pid.o: Hardware\Key.h
 .\objects\pid.o: .\System\Timer.h
 .\objects\pid.o: Hardware\Encoder.h
 .\objects\pid.o: Hardware\Serial.h
 .\objects\pid.o: D:\Application\Work\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\pid.o: Hardware\gray_track.h
+.\objects\pid.o: Hardware\MyI2C.h
+.\objects\pid.o: Hardware\MPU6050.h
+.\objects\pid.o: D:\Application\Work\Keil5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\pid.o: Hardware\filter.h
+.\objects\pid.o: Hardware\Buzzer.h
+.\objects\pid.o: Hardware\detect_position.h

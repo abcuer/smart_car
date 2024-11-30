@@ -726,6 +726,16 @@
               <FilePath>.\Hardware\Motor.c</FilePath>
             </File>
             <File>
+              <FileName>Motor_Run.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Motor_Run.h</FilePath>
+            </File>
+            <File>
+              <FileName>Motor_Run.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Motor_Run.c</FilePath>
+            </File>
+            <File>
               <FileName>Motor.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\Motor.h</FilePath>
@@ -736,24 +746,14 @@
               <FilePath>.\Hardware\Encoder.c</FilePath>
             </File>
             <File>
-              <FileName>Encoder.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Hardware\Encoder.h</FilePath>
-            </File>
-            <File>
-              <FileName>Motor_Run.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Hardware\Motor_Run.c</FilePath>
-            </File>
-            <File>
-              <FileName>Motor_Run.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Hardware\Motor_Run.h</FilePath>
-            </File>
-            <File>
               <FileName>Serial.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\Serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>Encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Encoder.h</FilePath>
             </File>
             <File>
               <FileName>Serial.h</FileName>
@@ -780,6 +780,61 @@
               <FileType>5</FileType>
               <FilePath>.\Hardware\gray_track.h</FilePath>
             </File>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\MPU6050.h</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050_Reg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\MPU6050_Reg.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyI2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\MyI2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyI2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\MyI2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>filter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\filter.h</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>detect_position.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\detect_position.c</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Buzzer.h</FilePath>
+            </File>
+            <File>
+              <FileName>detect_position.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\detect_position.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -789,6 +844,11 @@
               <FileName>global.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\global.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\stm32f10x_it.h</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>
@@ -804,11 +864,6 @@
               <FileName>stm32f10x_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\stm32f10x_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_it.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\stm32f10x_it.h</FilePath>
             </File>
           </Files>
         </Group>

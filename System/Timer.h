@@ -2,6 +2,6 @@
 #define __TIMER_H
 
 
-void Timer_Init(void);
+void Timer4_Init(void);
 
 #endif

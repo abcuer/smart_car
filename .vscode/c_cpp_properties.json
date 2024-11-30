@@ -3,11 +3,11 @@
         {
             "name": "Target 1",
             "includePath": [
-                "d:\\Stm32f103c8t6\\smart_car\\finally\\Start",
-                "d:\\Stm32f103c8t6\\smart_car\\finally\\Library",
-                "d:\\Stm32f103c8t6\\smart_car\\finally\\User",
-                "d:\\Stm32f103c8t6\\smart_car\\finally\\System",
-                "d:\\Stm32f103c8t6\\smart_car\\finally\\Hardware",
+                "d:\\Stm32f103c8t6\\smart_car\\new\\final(temporary)\\Start",
+                "d:\\Stm32f103c8t6\\smart_car\\new\\final(temporary)\\Library",
+                "d:\\Stm32f103c8t6\\smart_car\\new\\final(temporary)\\User",
+                "d:\\Stm32f103c8t6\\smart_car\\new\\final(temporary)\\System",
+                "d:\\Stm32f103c8t6\\smart_car\\new\\final(temporary)\\Hardware",
                 "D:\\Application\\Work\\Keil5\\ARM\\ARMCC\\include",
                 "D:\\Application\\Work\\Keil5\\ARM\\ARMCC\\include\\rw"
             ],

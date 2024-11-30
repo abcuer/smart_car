@@ -28,3 +28,4 @@
 .\objects\buzzer.o: .\Library\stm32f10x_usart.h
 .\objects\buzzer.o: .\Library\stm32f10x_wwdg.h
 .\objects\buzzer.o: .\Library\misc.h
+.\objects\buzzer.o: .\System\Delay.h

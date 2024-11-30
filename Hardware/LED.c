@@ -2,57 +2,43 @@
 
 void LED_Init(void)
 {
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15 | GPIO_Pin_14;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
 	
-	GPIO_SetBits(GPIOA, GPIO_Pin_1 | GPIO_Pin_2);
+	//GPIO_SetBits(GPIOC, GPIO_Pin_15 | GPIO_Pin_14 | GPIO_Pin_13);
 }
 
-void LED1_ON(void)
+//void LED_Red_ON(void)
+//{
+//	GPIO_WriteBit(GPIOC, GPIO_Pin_13, (BitAction)1);
+//}
+
+//void LED_Red_OFF(void)
+//{
+//	GPIO_WriteBit(GPIOC, GPIO_Pin_13, (BitAction)0);
+//}
+
+void LED_Blue_ON(void)
 {
-	GPIO_ResetBits(GPIOA, GPIO_Pin_1);
+	GPIO_SetBits(GPIOC, GPIO_Pin_14);
 }
 
-void LED1_OFF(void)
+void LED_Blue_OFF(void)
 {
-	GPIO_SetBits(GPIOA, GPIO_Pin_1);
+	GPIO_ResetBits(GPIOC, GPIO_Pin_14);
 }
 
-void LED1_Turn(void)
+void LED_Green_ON(void)
 {
-	if (GPIO_ReadOutputDataBit(GPIOA, GPIO_Pin_1) == 0)
-	{
-		GPIO_SetBits(GPIOA, GPIO_Pin_1);
-	}
-	else
-	{
-		GPIO_ResetBits(GPIOA, GPIO_Pin_1);
-	}
+	GPIO_SetBits(GPIOC, GPIO_Pin_15);
 }
 
-void LED2_ON(void)
+void LED_Green_OFF(void)
 {
-	GPIO_ResetBits(GPIOA, GPIO_Pin_2);
-}
-
-void LED2_OFF(void)
-{
-	GPIO_SetBits(GPIOA, GPIO_Pin_2);
-}
-
-void LED2_Turn(void)
-{
-	if (GPIO_ReadOutputDataBit(GPIOA, GPIO_Pin_2) == 0)
-	{
-		GPIO_SetBits(GPIOA, GPIO_Pin_2);
-	}
-	else
-	{
-		GPIO_ResetBits(GPIOA, GPIO_Pin_2);
-	}
+	GPIO_ResetBits(GPIOC, GPIO_Pin_15);
 }
