@@ -3,11 +3,11 @@
         {
             "name": "Target 1",
             "includePath": [
-                "c:\\Users\\fascinating_sea\\桌面\\1电赛参考方案\\smart_car-abcuer\\Start",
-                "c:\\Users\\fascinating_sea\\桌面\\1电赛参考方案\\smart_car-abcuer\\Library",
-                "c:\\Users\\fascinating_sea\\桌面\\1电赛参考方案\\smart_car-abcuer\\User",
-                "c:\\Users\\fascinating_sea\\桌面\\1电赛参考方案\\smart_car-abcuer\\System",
-                "c:\\Users\\fascinating_sea\\桌面\\1电赛参考方案\\smart_car-abcuer\\Hardware",
+                "d:\\Micro_Control_Unit(MCU)\\smart_car-abcuer\\Start",
+                "d:\\Micro_Control_Unit(MCU)\\smart_car-abcuer\\Library",
+                "d:\\Micro_Control_Unit(MCU)\\smart_car-abcuer\\User",
+                "d:\\Micro_Control_Unit(MCU)\\smart_car-abcuer\\System",
+                "d:\\Micro_Control_Unit(MCU)\\smart_car-abcuer\\Hardware",
                 "D:\\Application\\Work\\Keil5\\ARM\\ARMCC\\include",
                 "D:\\Application\\Work\\Keil5\\ARM\\ARMCC\\include\\rw"
             ],
