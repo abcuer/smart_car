@@ -45,3 +45,8 @@
 .\objects\main.o: .\Hardware\filter.h
 .\objects\main.o: .\Hardware\Buzzer.h
 .\objects\main.o: .\Hardware\detect_position.h
+<<<<<<< HEAD
+=======
+.\objects\main.o: .\Hardware\HMCI2C.h
+.\objects\main.o: .\Hardware\hmc5883l.h
+>>>>>>> master

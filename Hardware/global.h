@@ -16,6 +16,11 @@
 #include "filter.h"
 #include "Buzzer.h"
 #include "detect_position.h"
+<<<<<<< HEAD
+=======
+#include "HMCI2C.h"
+#include "hmc5883l.h"
+>>>>>>> master
 
 #define MAX_DUTY 100
 

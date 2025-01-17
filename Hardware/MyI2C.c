@@ -50,7 +50,11 @@ uint8_t MyI2C_R_SDA(void)
 void MyI2C_Init(void)
 {
 	/*开启时钟*/
+<<<<<<< HEAD
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);	//开启GPIOB的时钟
+=======
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);	//开启GPIOA的时钟
+>>>>>>> master
 	
 	/*GPIO初始化*/
 	GPIO_InitTypeDef GPIO_InitStructure;

@@ -10,7 +10,11 @@
 #define L3 GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_9)
 
 void gray_init(void);
+<<<<<<< HEAD
 void track(void);
+=======
+//void track(void);
+>>>>>>> master
 void Get_Light_TTL(void);
 
 #endif

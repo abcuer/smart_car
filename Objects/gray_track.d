@@ -45,3 +45,8 @@
 .\objects\gray_track.o: Hardware\filter.h
 .\objects\gray_track.o: Hardware\Buzzer.h
 .\objects\gray_track.o: Hardware\detect_position.h
+<<<<<<< HEAD
+=======
+.\objects\gray_track.o: Hardware\HMCI2C.h
+.\objects\gray_track.o: Hardware\hmc5883l.h
+>>>>>>> master

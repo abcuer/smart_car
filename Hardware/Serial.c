@@ -18,8 +18,13 @@ void Serial_Init(void)
 	
 	/*GPIO初始化*/
 	GPIO_InitTypeDef GPIO_InitStructure;
+<<<<<<< HEAD
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; // TX
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+=======
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; 
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;   // TX
+>>>>>>> master
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);					//将PA9引脚初始化为复用推挽输出
 	

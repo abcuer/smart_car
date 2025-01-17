@@ -8,6 +8,10 @@ uint16_t heise_time = 0;
 uint8_t Line_flag_task2 = 0;
 uint16_t baise_time_task2 = 0;
 int16_t speed_err;
+<<<<<<< HEAD
+=======
+float offset = 0;
+>>>>>>> master
 
 void SoundLight(void)
 {
@@ -19,6 +23,39 @@ void SoundLight(void)
 	}
 }
 
+<<<<<<< HEAD
+=======
+void angle_detect(void)
+{
+	angle.target = 90;
+	angle.now = yaw_Kalman;
+	offset = angle.now-angle.target;
+	if(offset >= 0)
+		if(offset > 3)
+		{
+			pid_cal(&angle);
+			motor_target_set(-angle.out, +angle.out);
+		}
+		else
+		{
+			motor_target_set(0,0);
+		}
+	else
+	{
+		offset = -offset;
+		if(offset > 3)
+		{
+			pid_cal(&angle);
+			motor_target_set(-angle.out, +angle.out);
+		}
+		else
+		{
+			motor_target_set(0,0);
+		}
+	}
+}
+
+>>>>>>> master
 void duanlu(void) // 角度环控制
 {
 	if(angle.target>=0)
@@ -105,6 +142,7 @@ void duanlu(void) // 角度环控制
 
 void Trace(void)	
 {
+<<<<<<< HEAD
 	Get_Light_TTL();
 	Line_flag = 1;
 	if(L3==1&&L2==1&&L1==1&&C1==1&&R1==1&&R2==1&&R3==1) // 1:检测到黑线 0:白色
@@ -143,6 +181,45 @@ void Trace(void)
 			}
 		}
 	}
+=======
+	
+//	if(L3==1&&L2==1&&L1==1&&C1==1&&R1==1&&R2==1&&R3==1) // 1:检测到黑线 0:白色
+//	{
+//		heise_time ++;
+//		if(heise_time >= 40)
+//		{
+//			heise_time = 0;
+//			Line_flag = 1;
+//		}
+//	}
+//	else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)
+//	{
+//		if(workstep == 2)
+//		{
+//			baise_time1 ++;
+////			baiseTime = baise_time1;
+//			if(baise_time1 >= 9570) // 数值超过100，Ling_flag = 0, 进入下一状态 
+//														// 必须根据电机速度来调整大小	
+//														// 打开串口，看看变化速度
+//			{
+//				Line_flag = 0;
+//				baise_time1 = 0;
+//			}
+//		}
+//		if(workstep == 4)
+//		{
+//			//baise_time_task2 ++;
+//			baise_time2 ++;
+//			if(baise_time2 >= 9600)
+//			{
+//				Line_flag = 0;
+//				baise_time2 = 0;
+	//			baise_time_task2 = 0;
+	//			Line_flag_task2 = 0;
+//			}
+//		}
+//	}
+>>>>>>> master
 //	else
 //	{
 //		if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)
@@ -159,6 +236,7 @@ void Trace(void)
 //		}
 //		else
 //		{
+<<<<<<< HEAD
 			if(L3==0&&L2==0&&L1==0&&C1==1&&R1==0&&R2==0&&R3==0)											// 000 1 000
 			{
 				speed_err = 0;
@@ -217,4 +295,91 @@ void Trace(void)
 			}
 			motor_speed_control(basespeed, speed_err);
 		}
+=======
+			Get_Light_TTL();
+			baise_time1 ++;
+			if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)
+			{
+				if(baise_time1 > 2800)
+				{
+					Line_flag = 0;
+				}
+			}
+			if(L3==0&&L2==0&&L1==0&&C1==1&&R1==0&&R2==0&&R3==0)											// 000 1 000
+			{
+				speed_err = 0;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==1&&C1==1&&R1==0&&R2==0&&R3==0)										// 001 1 000
+			{
+				speed_err = -4;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==0&&C1==1&&R1==1&&R2==0&&R3==0)							// 000 1 100
+			{
+				speed_err = 4;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==1&&C1==0&&R1==0&&R2==0&&R3==0)							// 001 0 000
+			{
+				speed_err = -5;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==1&&R2==0&&R3==0)							// 000 0 100
+			{
+				speed_err = 5;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==1&&L1==1&&C1==0&&R1==0&&R2==0&&R3==0)							// 011 0 000
+			{
+				speed_err = -6;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==1&&R2==1&&R3==0)							// 000 0 110
+			{
+				speed_err = 6;
+				baise_time1 = 0;
+			}				
+			else if(L3==0&&L2==1&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)							// 010 0 000 
+			{
+				speed_err = -7;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==1&&R3==0)							// 000 0 010	
+			{	
+				speed_err =	7;
+				baise_time1 = 0;
+				; 
+			}
+			else if(L3==1&&L2==1&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)							// 110 0 000
+			{
+				speed_err = -8;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==1&&R3==1)							// 000 0 011
+			{
+				speed_err = 8;
+				baise_time1 = 0;
+			}
+			else if(L3==1&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==0)							// 100 0 000 	
+			{
+				speed_err = -9;
+				baise_time1 = 0;
+			}
+			else if(L3==0&&L2==0&&L1==0&&C1==0&&R1==0&&R2==0&&R3==1)							// 000 0 001 
+			{
+				speed_err = 9;
+				baise_time1 = 0;
+			}
+			motor_speed_control(basespeed, speed_err);
+}
+
+//					else
+//					{
+//						baise_time1 = 0;
+//					}
+				
+
+			
+>>>>>>> master
 //}

@@ -840,7 +840,11 @@
 
   <Group>
     <GroupName>System</GroupName>
+<<<<<<< HEAD
     <tvExp>1</tvExp>
+=======
+    <tvExp>0</tvExp>
+>>>>>>> master
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -903,6 +907,7 @@
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>57</FileNumber>
+<<<<<<< HEAD
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -915,6 +920,8 @@
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>58</FileNumber>
+=======
+>>>>>>> master
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -926,6 +933,21 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
+<<<<<<< HEAD
+=======
+      <FileNumber>58</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Hardware\LED.h</PathWithFileName>
+      <FilenameWithoutPath>LED.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+>>>>>>> master
       <FileNumber>59</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -1027,8 +1049,13 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+<<<<<<< HEAD
       <PathWithFileName>.\Hardware\Motor_Run.h</PathWithFileName>
       <FilenameWithoutPath>Motor_Run.h</FilenameWithoutPath>
+=======
+      <PathWithFileName>.\Hardware\Motor.h</PathWithFileName>
+      <FilenameWithoutPath>Motor.h</FilenameWithoutPath>
+>>>>>>> master
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1051,8 +1078,13 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+<<<<<<< HEAD
       <PathWithFileName>.\Hardware\Motor.h</PathWithFileName>
       <FilenameWithoutPath>Motor.h</FilenameWithoutPath>
+=======
+      <PathWithFileName>.\Hardware\Motor_Run.h</PathWithFileName>
+      <FilenameWithoutPath>Motor_Run.h</FilenameWithoutPath>
+>>>>>>> master
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1071,6 +1103,7 @@
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>71</FileNumber>
+<<<<<<< HEAD
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1083,6 +1116,8 @@
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>72</FileNumber>
+=======
+>>>>>>> master
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1094,6 +1129,21 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
+<<<<<<< HEAD
+=======
+      <FileNumber>72</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Hardware\Serial.c</PathWithFileName>
+      <FilenameWithoutPath>Serial.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+>>>>>>> master
       <FileNumber>73</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
@@ -1251,6 +1301,7 @@
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>86</FileNumber>
+<<<<<<< HEAD
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1263,6 +1314,8 @@
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>87</FileNumber>
+=======
+>>>>>>> master
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1274,6 +1327,21 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
+<<<<<<< HEAD
+=======
+      <FileNumber>87</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Hardware\detect_position.c</PathWithFileName>
+      <FilenameWithoutPath>detect_position.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+>>>>>>> master
       <FileNumber>88</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
@@ -1284,6 +1352,57 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+<<<<<<< HEAD
+=======
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>89</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Hardware\hmc5883l.c</PathWithFileName>
+      <FilenameWithoutPath>hmc5883l.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>90</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Hardware\hmc5883l.h</PathWithFileName>
+      <FilenameWithoutPath>hmc5883l.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>91</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Hardware\HMCI2C.c</PathWithFileName>
+      <FilenameWithoutPath>HMCI2C.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>92</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Hardware\HMCI2C.h</PathWithFileName>
+      <FilenameWithoutPath>HMCI2C.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+>>>>>>> master
   </Group>
 
   <Group>
@@ -1294,7 +1413,11 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
       <FileNumber>89</FileNumber>
+=======
+      <FileNumber>93</FileNumber>
+>>>>>>> master
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1306,7 +1429,11 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
       <FileNumber>90</FileNumber>
+=======
+      <FileNumber>94</FileNumber>
+>>>>>>> master
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1318,7 +1445,11 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
       <FileNumber>91</FileNumber>
+=======
+      <FileNumber>95</FileNumber>
+>>>>>>> master
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1330,7 +1461,11 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
       <FileNumber>92</FileNumber>
+=======
+      <FileNumber>96</FileNumber>
+>>>>>>> master
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1342,7 +1477,11 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
       <FileNumber>93</FileNumber>
+=======
+      <FileNumber>97</FileNumber>
+>>>>>>> master
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>

@@ -45,3 +45,8 @@
 .\objects\pid.o: Hardware\filter.h
 .\objects\pid.o: Hardware\Buzzer.h
 .\objects\pid.o: Hardware\detect_position.h
+<<<<<<< HEAD
+=======
+.\objects\pid.o: Hardware\HMCI2C.h
+.\objects\pid.o: Hardware\hmc5883l.h
+>>>>>>> master

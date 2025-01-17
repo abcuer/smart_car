@@ -676,16 +676,27 @@
           <GroupName>Hardware</GroupName>
           <Files>
             <File>
+<<<<<<< HEAD
               <FileName>LED.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\LED.h</FilePath>
             </File>
             <File>
+=======
+>>>>>>> master
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\LED.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
+=======
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\LED.h</FilePath>
+            </File>
+            <File>
+>>>>>>> master
               <FileName>Key.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\Key.c</FilePath>
@@ -726,9 +737,15 @@
               <FilePath>.\Hardware\Motor.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>Motor_Run.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\Motor_Run.h</FilePath>
+=======
+              <FileName>Motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Motor.h</FilePath>
+>>>>>>> master
             </File>
             <File>
               <FileName>Motor_Run.c</FileName>
@@ -736,9 +753,15 @@
               <FilePath>.\Hardware\Motor_Run.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>Motor.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\Motor.h</FilePath>
+=======
+              <FileName>Motor_Run.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Motor_Run.h</FilePath>
+>>>>>>> master
             </File>
             <File>
               <FileName>Encoder.c</FileName>
@@ -746,16 +769,27 @@
               <FilePath>.\Hardware\Encoder.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>Serial.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\Serial.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> master
               <FileName>Encoder.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\Encoder.h</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
+=======
+              <FileName>Serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Serial.c</FilePath>
+            </File>
+            <File>
+>>>>>>> master
               <FileName>Serial.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\Serial.h</FilePath>
@@ -821,20 +855,54 @@
               <FilePath>.\Hardware\Buzzer.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>detect_position.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\detect_position.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> master
               <FileName>Buzzer.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\Buzzer.h</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
+=======
+              <FileName>detect_position.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\detect_position.c</FilePath>
+            </File>
+            <File>
+>>>>>>> master
               <FileName>detect_position.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\detect_position.h</FilePath>
             </File>
+<<<<<<< HEAD
+=======
+            <File>
+              <FileName>hmc5883l.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\hmc5883l.c</FilePath>
+            </File>
+            <File>
+              <FileName>hmc5883l.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\hmc5883l.h</FilePath>
+            </File>
+            <File>
+              <FileName>HMCI2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\HMCI2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>HMCI2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\HMCI2C.h</FilePath>
+            </File>
+>>>>>>> master
           </Files>
         </Group>
         <Group>

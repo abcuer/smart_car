@@ -29,5 +29,9 @@ void pid_control(void);
 void pid_cal(pid_t *pid);
 void pidout_limit(pid_t *pid);
 
+<<<<<<< HEAD
 float Yaw_error(float Target, float Now);
+=======
+//float Yaw_error(float Target, float Now);
+>>>>>>> master
 #endif

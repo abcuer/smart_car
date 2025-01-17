@@ -42,6 +42,11 @@
 ".\objects\filter.o"
 ".\objects\buzzer.o"
 ".\objects\detect_position.o"
+<<<<<<< HEAD
+=======
+".\objects\hmc5883l.o"
+".\objects\hmci2c.o"
+>>>>>>> master
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
 --strict --scatter ".\Objects\Project.sct"

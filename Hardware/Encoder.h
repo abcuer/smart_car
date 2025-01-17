@@ -6,4 +6,11 @@ void EncoderB_Init(void);
 int16_t EncoderA_Get(void);
 int16_t EncoderB_Get(void);
 
+<<<<<<< HEAD
+=======
+/*
+	初始化编码器
+	获取编码器的值
+*/
+>>>>>>> master
 #endif

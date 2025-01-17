@@ -7,11 +7,16 @@ void Key_Init(void)
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+<<<<<<< HEAD
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+=======
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_11;
+>>>>>>> master
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
 
+<<<<<<< HEAD
 uint8_t Key_GetNum(void)
 {
 	uint8_t KeyNum = 0;
@@ -23,5 +28,30 @@ uint8_t Key_GetNum(void)
 		KeyNum = 1;
 	}
 	
+=======
+uint8_t Key_GetNum1(void)
+{
+	uint8_t KeyNum = 0;
+	if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == 0)
+	{
+		Delay_ms(20);
+		while (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == 0);
+		Delay_ms(20);
+		KeyNum = 1;
+	}
+	return KeyNum;
+}
+
+uint8_t Key_GetNum2(void)
+{
+	uint8_t KeyNum = 0;
+	if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11) == 0)
+	{
+		Delay_ms(20);
+		while (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11) == 0);
+		Delay_ms(20);
+		KeyNum = 1;
+	}
+>>>>>>> master
 	return KeyNum;
 }
